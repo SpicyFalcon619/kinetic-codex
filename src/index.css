@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,104 +6,115 @@
 
 @layer base {
   :root {
-    /* Light ethereal cyberpunk theme */
-    --background: 220 14% 96%;
-    --foreground: 220 30% 10%;
+    /* Bright & Whimsical Medieval Kingdom Theme */
+    --background: 42 40% 96%;
+    --foreground: 30 40% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 30% 10%;
+    --card: 42 50% 98%;
+    --card-foreground: 30 40% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 10%;
+    --popover: 42 50% 98%;
+    --popover-foreground: 30 40% 12%;
 
-    /* Deep void black for contrast */
-    --primary: 220 30% 8%;
-    --primary-foreground: 220 20% 97%;
+    /* Royal Gold Primary */
+    --primary: 38 80% 45%;
+    --primary-foreground: 42 50% 98%;
 
-    --secondary: 220 15% 92%;
-    --secondary-foreground: 220 30% 15%;
+    --secondary: 42 30% 90%;
+    --secondary-foreground: 30 40% 20%;
 
-    --muted: 220 15% 94%;
-    --muted-foreground: 220 15% 45%;
+    --muted: 42 20% 88%;
+    --muted-foreground: 30 20% 45%;
 
-    --accent: 220 15% 90%;
-    --accent-foreground: 220 30% 10%;
+    --accent: 160 60% 40%;
+    --accent-foreground: 42 50% 98%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 42 50% 98%;
 
-    --border: 220 20% 82%;
-    --input: 220 20% 82%;
-    --ring: 180 100% 45%;
+    --border: 30 30% 80%;
+    --input: 30 30% 80%;
+    --ring: 38 80% 50%;
 
     --radius: 0.75rem;
 
-    /* Custom Kinetic Codex tokens */
-    --cyan-glow: 180 100% 50%;
-    --cyan-soft: 180 70% 60%;
-    --amber-active: 38 95% 55%;
-    --amber-soft: 38 80% 65%;
-    --void-deep: 220 40% 6%;
-    --void-soft: 220 30% 12%;
-    
+    /* Kingdom Tokens */
+    --gold: 38 85% 55%;
+    --gold-bright: 45 95% 60%;
+    --gold-dark: 38 70% 40%;
+    --emerald: 160 60% 40%;
+    --emerald-bright: 160 70% 50%;
+    --ruby: 350 70% 55%;
+    --royal-purple: 270 50% 50%;
+    --parchment: 42 40% 92%;
+    --parchment-dark: 35 35% 75%;
+    --wood-brown: 30 40% 30%;
+    --stone-gray: 30 10% 50%;
+
+    /* XP & Gamification Colors */
+    --xp-fill: 160 60% 45%;
+    --streak-fire: 25 95% 55%;
+    --gem-blue: 210 80% 55%;
+    --crown-gold: 45 100% 50%;
+
     /* Gradients */
-    --gradient-void: linear-gradient(135deg, hsl(220 40% 6%) 0%, hsl(220 30% 15%) 100%);
-    --gradient-glow: linear-gradient(135deg, hsl(180 100% 50% / 0.2) 0%, hsl(38 95% 55% / 0.2) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(220 20% 97%) 0%, hsl(220 25% 92%) 100%);
+    --gradient-parchment: linear-gradient(135deg, hsl(42 50% 98%) 0%, hsl(35 40% 90%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(38 85% 55%) 0%, hsl(45 95% 65%) 100%);
+    --gradient-banner: linear-gradient(180deg, hsl(42 40% 96%) 0%, hsl(35 35% 88%) 100%);
 
     /* Shadows */
-    --shadow-glow-cyan: 0 0 30px hsl(180 100% 50% / 0.3);
-    --shadow-glow-amber: 0 0 30px hsl(38 95% 55% / 0.3);
-    --shadow-elevation: 0 4px 24px hsl(220 30% 10% / 0.08);
-    --shadow-card: 0 8px 32px hsl(220 30% 10% / 0.06);
+    --shadow-parchment: 0 4px 20px hsl(30 40% 20% / 0.1);
+    --shadow-gold: 0 0 30px hsl(38 85% 55% / 0.4);
+    --shadow-card: 0 8px 32px hsl(30 40% 20% / 0.08);
+    --shadow-emboss: inset 0 2px 4px hsl(42 50% 100% / 0.5), 0 2px 4px hsl(30 40% 20% / 0.15);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 180 100% 50%;
+    --sidebar-background: 42 40% 94%;
+    --sidebar-foreground: 30 40% 20%;
+    --sidebar-primary: 38 80% 45%;
+    --sidebar-primary-foreground: 42 50% 98%;
+    --sidebar-accent: 42 30% 88%;
+    --sidebar-accent-foreground: 30 40% 20%;
+    --sidebar-border: 30 30% 80%;
+    --sidebar-ring: 38 80% 50%;
   }
 
   .dark {
-    --background: 220 30% 6%;
-    --foreground: 220 15% 95%;
+    --background: 30 25% 10%;
+    --foreground: 42 30% 90%;
 
-    --card: 220 30% 10%;
-    --card-foreground: 220 15% 95%;
+    --card: 30 25% 14%;
+    --card-foreground: 42 30% 90%;
 
-    --popover: 220 30% 10%;
-    --popover-foreground: 220 15% 95%;
+    --popover: 30 25% 14%;
+    --popover-foreground: 42 30% 90%;
 
-    --primary: 220 15% 95%;
-    --primary-foreground: 220 30% 8%;
+    --primary: 38 80% 55%;
+    --primary-foreground: 30 25% 10%;
 
-    --secondary: 220 25% 15%;
-    --secondary-foreground: 220 15% 95%;
+    --secondary: 30 20% 20%;
+    --secondary-foreground: 42 30% 90%;
 
-    --muted: 220 25% 15%;
-    --muted-foreground: 220 15% 60%;
+    --muted: 30 20% 18%;
+    --muted-foreground: 42 20% 55%;
 
-    --accent: 220 25% 18%;
-    --accent-foreground: 220 15% 95%;
+    --accent: 160 50% 45%;
+    --accent-foreground: 30 25% 10%;
 
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 60% 40%;
+    --destructive-foreground: 42 30% 90%;
 
-    --border: 220 25% 18%;
-    --input: 220 25% 18%;
-    --ring: 180 100% 50%;
+    --border: 30 20% 22%;
+    --input: 30 20% 22%;
+    --ring: 38 80% 55%;
 
-    --sidebar-background: 220 30% 8%;
-    --sidebar-foreground: 220 15% 90%;
-    --sidebar-primary: 180 100% 50%;
-    --sidebar-primary-foreground: 220 30% 6%;
-    --sidebar-accent: 220 25% 15%;
-    --sidebar-accent-foreground: 220 15% 90%;
-    --sidebar-border: 220 25% 15%;
-    --sidebar-ring: 180 100% 50%;
+    --sidebar-background: 30 25% 12%;
+    --sidebar-foreground: 42 30% 85%;
+    --sidebar-primary: 38 80% 55%;
+    --sidebar-primary-foreground: 30 25% 10%;
+    --sidebar-accent: 30 20% 18%;
+    --sidebar-accent-foreground: 42 30% 85%;
+    --sidebar-border: 30 20% 20%;
+    --sidebar-ring: 38 80% 55%;
   }
 }
 
@@ -113,7 +124,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground font-body antialiased;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4b896' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -122,27 +134,44 @@
 }
 
 @layer utilities {
-  .text-glow-cyan {
-    text-shadow: 0 0 20px hsl(180 100% 50% / 0.5), 0 0 40px hsl(180 100% 50% / 0.3);
+  .text-glow-gold {
+    text-shadow: 0 0 20px hsl(38 85% 55% / 0.6), 0 0 40px hsl(38 85% 55% / 0.3);
   }
 
-  .text-glow-amber {
-    text-shadow: 0 0 20px hsl(38 95% 55% / 0.5), 0 0 40px hsl(38 95% 55% / 0.3);
+  .text-glow-emerald {
+    text-shadow: 0 0 20px hsl(160 60% 40% / 0.6), 0 0 40px hsl(160 60% 40% / 0.3);
   }
 
-  .box-glow-cyan {
-    box-shadow: 0 0 30px hsl(180 100% 50% / 0.3), 0 0 60px hsl(180 100% 50% / 0.15);
+  .box-glow-gold {
+    box-shadow: 0 0 25px hsl(38 85% 55% / 0.4), 0 0 50px hsl(38 85% 55% / 0.2);
   }
 
-  .box-glow-amber {
-    box-shadow: 0 0 30px hsl(38 95% 55% / 0.3), 0 0 60px hsl(38 95% 55% / 0.15);
+  .box-glow-emerald {
+    box-shadow: 0 0 25px hsl(160 60% 40% / 0.4), 0 0 50px hsl(160 60% 40% / 0.2);
   }
 
-  .gradient-void {
-    background: linear-gradient(135deg, hsl(220 40% 6%) 0%, hsl(220 30% 15%) 100%);
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(38 85% 55%) 0%, hsl(45 95% 65%) 100%);
   }
 
-  .gradient-glow {
-    background: linear-gradient(135deg, hsl(180 100% 50% / 0.1) 0%, hsl(38 95% 55% / 0.1) 100%);
+  .gradient-parchment {
+    background: linear-gradient(135deg, hsl(42 50% 98%) 0%, hsl(35 40% 90%) 100%);
+  }
+
+  .parchment-texture {
+    background-color: hsl(42 40% 96%);
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+  }
+
+  .banner-ribbon {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+  }
+
+  .shield-shape {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  .scroll-border {
+    border-image: linear-gradient(135deg, hsl(38 70% 50%) 0%, hsl(35 50% 70%) 50%, hsl(38 70% 50%) 100%) 1;
   }
 }
