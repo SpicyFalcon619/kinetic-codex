@@ -1,31 +1,31 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Hand, GitBranch, Link, Route, Zap, Eye } from "lucide-react";
+import { Swords, GitBranch, Link, Route, Scroll, Gamepad2 } from "lucide-react";
 
 const features = [
   {
-    icon: Hand,
-    title: "The Pinch",
-    description: "Sort arrays with intuitive pinch gestures. Feel the swap, learn the algorithm.",
-    color: "cyan" as const,
+    icon: Swords,
+    title: "The Sorting Tournament",
+    description: "Duel arrays in the arena! Swap elements with gestures to prove your sorting mastery.",
+    color: "gold" as const,
   },
   {
     icon: GitBranch,
-    title: "The Merge",
-    description: "Master Git branching through hand movements. Merge conflicts become tangible.",
-    color: "amber" as const,
+    title: "The Timeline Tavern",
+    description: "Travel through Git branches. Merge timelines and resolve conflicts like a true wizard.",
+    color: "emerald" as const,
   },
   {
     icon: Link,
-    title: "The Chain",
-    description: "Navigate linked lists by connecting nodes with your fingertips.",
-    color: "cyan" as const,
+    title: "The Chain Forge",
+    description: "Craft and connect nodes in the ancient forge. Build linked lists with your hands.",
+    color: "gold" as const,
   },
   {
     icon: Route,
-    title: "The Path",
-    description: "Traverse graphs by tracing paths through gesture recognition.",
-    color: "amber" as const,
+    title: "The Pathfinder's Trail",
+    description: "Navigate treacherous graphs. Find the shortest path through the enchanted forest.",
+    color: "emerald" as const,
   },
 ];
 
@@ -54,8 +54,8 @@ export const FeatureSection = () => {
 
   return (
     <section className="py-32 px-6 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/30 to-background" />
+      {/* Decorative Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
 
       <div className="relative max-w-6xl mx-auto">
         {/* Section Header */}
@@ -66,16 +66,16 @@ export const FeatureSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-glow/10 border border-cyan-glow/20 mb-6">
-            <Zap className="w-4 h-4 text-cyan-glow" />
-            <span className="text-sm font-medium text-cyan-glow">Gesture Mechanics</span>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald/10 border-2 border-emerald/30 mb-6">
+            <Scroll className="w-4 h-4 text-emerald" />
+            <span className="text-sm font-display font-medium text-emerald">Quest Mechanics</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Learn Through <span className="text-cyan-glow">Motion</span>
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+            Master the <span className="text-gold text-glow-gold">Ancient Arts</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Four distinct gesture mechanics transform abstract algorithms into intuitive movements.
-            Your body becomes the interface.
+            Four legendary quests await. Use gesture magic to conquer algorithms 
+            and earn your place among the Code Knights.
           </p>
         </motion.div>
 
@@ -91,26 +91,23 @@ export const FeatureSection = () => {
             <motion.div
               key={feature.title}
               variants={itemVariants}
-              className="group relative p-8 rounded-2xl bg-card border border-border hover:border-cyan-glow/30 transition-all duration-300"
-              style={{
-                boxShadow: "var(--shadow-card)",
-              }}
+              className="group relative p-8 rounded-2xl bg-card border-2 border-border hover:border-gold/40 transition-all duration-300 shadow-lg"
             >
               {/* Glow Effect on Hover */}
               <div className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
-                feature.color === "cyan" ? "box-glow-cyan" : "box-glow-amber"
+                feature.color === "gold" ? "box-glow-gold" : "box-glow-emerald"
               }`} style={{ zIndex: -1 }} />
 
               <div className="flex items-start gap-5">
-                <div className={`flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center ${
-                  feature.color === "cyan" 
-                    ? "bg-cyan-glow/10 text-cyan-glow" 
-                    : "bg-amber-active/10 text-amber-active"
+                <div className={`flex-shrink-0 w-16 h-16 rounded-xl flex items-center justify-center border-2 ${
+                  feature.color === "gold" 
+                    ? "bg-gold/10 text-gold border-gold/30" 
+                    : "bg-emerald/10 text-emerald border-emerald/30"
                 }`}>
-                  <feature.icon className="w-7 h-7" />
+                  <feature.icon className="w-8 h-8" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 group-hover:text-cyan-glow transition-colors">
+                  <h3 className="text-xl font-display font-semibold mb-2 group-hover:text-gold transition-colors">
                     {feature.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -130,10 +127,10 @@ export const FeatureSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-12 text-center"
         >
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-secondary/50 border border-border">
-            <Eye className="w-5 h-5 text-muted-foreground" />
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-card border-2 border-border shadow-md">
+            <Gamepad2 className="w-5 h-5 text-muted-foreground" />
             <span className="text-sm text-muted-foreground">
-              <span className="font-medium">Dual Mode Control:</span> Switch to keyboard/mouse anytime
+              <span className="font-display font-medium">Dual Controls:</span> Use gestures or keyboard/mouse
             </span>
           </div>
         </motion.div>

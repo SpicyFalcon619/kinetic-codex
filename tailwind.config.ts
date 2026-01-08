@@ -14,9 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Space Grotesk", "system-ui", "sans-serif"],
-        display: ["Space Grotesk", "system-ui", "sans-serif"],
-        mono: ["JetBrains Mono", "monospace"],
+        display: ["Cinzel", "serif"],
+        body: ["Lora", "Georgia", "serif"],
+        sans: ["Lora", "Georgia", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -52,19 +52,29 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Kinetic Codex custom colors
-        cyan: {
-          glow: "hsl(var(--cyan-glow))",
-          soft: "hsl(var(--cyan-soft))",
+        // Kingdom Colors
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          bright: "hsl(var(--gold-bright))",
+          dark: "hsl(var(--gold-dark))",
         },
-        amber: {
-          active: "hsl(var(--amber-active))",
-          soft: "hsl(var(--amber-soft))",
+        emerald: {
+          DEFAULT: "hsl(var(--emerald))",
+          bright: "hsl(var(--emerald-bright))",
         },
-        void: {
-          deep: "hsl(var(--void-deep))",
-          soft: "hsl(var(--void-soft))",
+        ruby: "hsl(var(--ruby))",
+        royal: "hsl(var(--royal-purple))",
+        parchment: {
+          DEFAULT: "hsl(var(--parchment))",
+          dark: "hsl(var(--parchment-dark))",
         },
+        wood: "hsl(var(--wood-brown))",
+        stone: "hsl(var(--stone-gray))",
+        // Gamification
+        xp: "hsl(var(--xp-fill))",
+        streak: "hsl(var(--streak-fire))",
+        gem: "hsl(var(--gem-blue))",
+        crown: "hsl(var(--crown-gold))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -92,15 +102,27 @@ export default {
         },
         "pulse-glow": {
           "0%, 100%": { opacity: "1", transform: "scale(1)" },
-          "50%": { opacity: "0.7", transform: "scale(1.05)" },
+          "50%": { opacity: "0.85", transform: "scale(1.03)" },
         },
         "float": {
           "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" },
+          "50%": { transform: "translateY(-8px)" },
         },
         "shimmer": {
           "0%": { backgroundPosition: "-200% 0" },
           "100%": { backgroundPosition: "200% 0" },
+        },
+        "bounce-gentle": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-5px)" },
+        },
+        "sparkle": {
+          "0%, 100%": { opacity: "1", transform: "scale(1) rotate(0deg)" },
+          "50%": { opacity: "0.6", transform: "scale(1.2) rotate(180deg)" },
+        },
+        "flame": {
+          "0%, 100%": { transform: "scaleY(1) translateY(0)" },
+          "50%": { transform: "scaleY(1.1) translateY(-2px)" },
         },
       },
       animation: {
@@ -109,10 +131,13 @@ export default {
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
         "float": "float 3s ease-in-out infinite",
         "shimmer": "shimmer 3s ease-in-out infinite",
+        "bounce-gentle": "bounce-gentle 2s ease-in-out infinite",
+        "sparkle": "sparkle 2s ease-in-out infinite",
+        "flame": "flame 0.8s ease-in-out infinite",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "grid-pattern": "linear-gradient(hsl(var(--cyan-glow) / 0.03) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--cyan-glow) / 0.03) 1px, transparent 1px)",
+        "stone-pattern": "repeating-linear-gradient(90deg, hsl(var(--border)) 0, hsl(var(--border)) 1px, transparent 1px, transparent 20px)",
       },
       backgroundSize: {
         "grid": "50px 50px",
